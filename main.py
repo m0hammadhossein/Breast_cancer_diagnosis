@@ -13,7 +13,7 @@ from sklearn.tree import DecisionTreeClassifier
 
 from calc_metrics import calc_metrics
 
-# Set library matplotlib
+# Set the backend for matplotlib to 'TKAgg' for compatibility with Tkinter
 matplotlib.use('TKAgg')
 
 # Load dataset
@@ -88,6 +88,9 @@ pr_test = [pr_gnb, pr_knn, pr_dt, pr_rf, pr_svm, pr_lr, pr_ann]
 rc_test = [rc_gnb, rc_knn, rc_dt, rc_rf, rc_svm, rc_lr, rc_ann]
 title = ['GNB', 'KNN', 'DT', 'RF', 'SVM', 'LR', 'ANN']
 colors = ['black', 'red', 'yellow', 'orange', 'green', 'blue', 'pink']
+
+# Plotting
+
 plt.figure(figsize=(6, 6))
 plt.subplot(221)
 plt.xticks(fontsize=7)
